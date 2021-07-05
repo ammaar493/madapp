@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Assignment.MainPage">
+
+    <StackLayout>
+        <Label Text="1869-Assignment" TextColor="AliceBlue" FontSize="Title" HorizontalTextAlignment="Center"/>
+        <Label Text=""/>
+        <Label Text="Are you graduated...?" TextColor="White"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Button Text="Yes"  TextColor="white" BackgroundColor="Green" x:Name="btnyes" Clicked="btnyes_Clicked"/>
+            <Button Text="No" x:Name="btnno" BackgroundColor="Red" Clicked="btnno_Clicked"/>
+        </StackLayout>
+        <Entry x:Name="txtname" Placeholder=" Name" />
+        <Entry x:Name="txtcontact" Placeholder=" Contact" />
+        <Entry x:Name="txtemail" Placeholder=" Email" />
+        <Entry x:Name="txtuniversity" Placeholder=" University" />
+        <Entry x:Name="txtranking" Placeholder=" Ranking" />
+        <Entry x:Name="txtdiscipline" Placeholder=" Discipline" />
+        <Button Text="Take Picture" x:Name="btnCamera" Clicked="btnCamera_Clicked"/>
+        <Button Text="Submit" x:Name="btnSubmit" Clicked="btnSubmit_Clicked"/>
+        <ListView x:Name="lstNames">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}" Detail="{Binding id}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
